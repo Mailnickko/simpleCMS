@@ -21,6 +21,12 @@ app.factory('productFactory', function($http) {
 		});
 	};
 
+	factory.destroyProduct = function(product, callback) {
+		$http.delete('/products/' + product._id).success(function(response) {
+			callback(response);
+		})
+	}
+
 	
 
 	return factory;

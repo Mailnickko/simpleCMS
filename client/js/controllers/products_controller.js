@@ -38,4 +38,10 @@ app.controller('ProductCtrl', function(productFactory, $scope) {
 		}
 		return false;
 	}
+
+	$scope.destroyProduct = function(product) {
+		productFactory.destroyProduct(product, function() {
+			getProducts();
+		})
+	}
 });

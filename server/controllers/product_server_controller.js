@@ -42,6 +42,18 @@ module.exports = (function() {
 					res.json(results)
 				}
 			})
+		},
+
+		destroy: function(req, res) {
+			Product.remove({
+				_id: req.params.id
+			}, function(err) {
+				if(err) {
+					res.json(err);
+				} else {
+					module.exports.show(req, res);
+				}
+			})
 		} 
 	}
 

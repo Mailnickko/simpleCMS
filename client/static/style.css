@@ -42,3 +42,10 @@
 .updates h5 {
 	padding: 10px;
 }
+
+.product {
+	max-width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+}

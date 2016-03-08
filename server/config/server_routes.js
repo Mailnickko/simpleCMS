@@ -26,6 +26,9 @@ module.exports = function(app) {
 	app.post('/addProduct', function(req, res) {
 		products.add(req, res);
 	});
+	app.delete('/products/:id', function(req, res) {
+		products.destroy(req, res);
+	});
 
 
 	app.get('/orders', function(req, res) {
