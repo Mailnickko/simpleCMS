@@ -1,0 +1,44 @@
+
+.no-padding {
+	padding: 0;
+}
+
+.center_text {
+	text-align: center;
+}
+
+.new_customer, .new_order {
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+.customer_search, .order_search {
+	margin-bottom: 20px;
+}
+
+.product-wrapper {
+	border: 3px solid black;
+}
+.padded {
+	padding: 10px;
+}
+
+.image-wrapper {
+	position: relative;
+}
+
+.glyphicon {
+	position: absolute;
+	right: 8%;
+	top: 6%;
+    font-size: 20px;
+}
+
+.input-wrapper {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.updates h5 {
+	padding: 10px;
+}

@@ -1,0 +1,36 @@
+<h2>Customers</h2>
+
+<h3>Add a new customer</h3>
+<div class="row new_customer">
+	<div class="col-xs-12">
+		<div ng-show="isDuplicate()">{{dup_msg}}</div>
+		<h4 ng-show='notValid == true' style='color: red'>Please enter a name!</h4>
+		<h4>Customer Name:</h4>
+		<input type="text" ng-model='newCustomer.name'/>
+		<button class='btn btn-primary' ng-click="addCustomer(newCustomer)">Add</button>
+	</div>
+</div>
+
+<div class="row customer_search">
+	<input type="text" ng-model="filter_name" class="col-xs-4 col-xs-offset-7" placeholder="Search for a customer...">
+</div>
+<div class="row customer_details">
+	<div class="col-xs-12">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Customer name</th>
+					<th>Customer Created</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="customer in customers | filter: filter_name | orderBy: 'customer.created'">
+					<td>{{customer.name}}</td>
+					<td>{{customer.created_at | date: 'MMMM d, yyyy'}}</td>
+					<td><button ng-click='destroyCustomer(customer)' class='btn btn-danger'>Remove</button></td>
+				</tr>	
+			</tbody>
+		</table>
+	</div>
+</div>

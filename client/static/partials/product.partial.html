@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-4">
+				<input type="text" placeholder="Search by name...">
+				<input type="submit" value="Filter">
+				<br><br><br><br>
+				<h4>Add a new product</h4>
+				<div ng-show="isDuplicate()">{{dup_msg}}</div>
+				<h4 ng-show='notValid == true' style='color: red'>Please fill out all fields!</h4>
+	            <label>Name:</label><br>
+	                <input type='text' ng-model="newProduct.name" placeholder='name...'><br>
+	            <label>Image(url):</label><br>
+	                <input type='text' ng-model="newProduct.img" placeholder='http://'><br>
+	            <label>Description:</label><br>
+	                <textarea rows='5' ng-model="newProduct.desc" cols='20'></textarea><br>
+	            <label>Initial Quantity:</label><br>
+	                <input type='number' ng-model="newProduct.qty" ><br>
+	            <button class='btn btn-primary' ng-click="addProduct(newProduct)">Create</button>
+			</div>
+			<div class="col-xs-8 image-wrapper center_text product-wrapper" ng-repeat='product in products | filter: filter_name track by $index'>
+				<div class="col-xs-4 padded">
+	                <img class="img-responsive" ng-src= "{{product.img}}"><span class="glyphicon glyphicon-eye-close"></span>
+	                <p>{{product.name}}</p>
+	                <p>Quantity Remaining: {{product.qty}}</p>        
+	            </div>
+			</div>	
+		</div>
+	</div>
+</div>
