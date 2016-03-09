@@ -44,8 +44,11 @@
 }
 
 .product {
-	max-width: 200px;
 	display: inline-block;
 	vertical-align: top;
 	float: left;
+}
+
+.product p {
+	margin: 0;
 }
