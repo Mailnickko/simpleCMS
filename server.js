@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 //Body Parser
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
@@ -15,4 +17,6 @@ require('./server/config/mongoose.js');
 require('./server/config/server_routes.js')(app);
 
 //Server
-var server = app.listen(process.env.PORT || 5000)
+var server = app.listen(app.get('port'), function(){
+ console.log("listening on port ", app.get('port'));
+});
