@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.6"
+    "express": "~4.2.0",
+    "mongoose": "latest",
+    "body-parser": "latest"
   },
   "scripts": {
     "start": "node server.js"
@@ -11,14 +11,7 @@
   "description": "Simple CMS with MEAN stack",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {
-    "express": "~4.2.0",
-    "mongoose": "latest",
-    "body-parser": "latest"
-    },
-  "engines": {
-    "node": "0.12.7"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mailnickko/simpleCMS.git"
