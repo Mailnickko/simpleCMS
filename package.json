@@ -11,7 +11,11 @@
   "description": "Simple CMS with MEAN stack",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "express": "~4.2.0",
+    "mongoose": "latest",
+    "body-parser": "latest"
+    },
   "engines": {
     "node": "0.12.7"
   },
