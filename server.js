@@ -15,6 +15,6 @@ require('./server/config/mongoose.js');
 require('./server/config/server_routes.js')(app);
 
 //Server
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+var server = app.listen(3000, function(){
+    console.log('Connected to port 3000');
+})
