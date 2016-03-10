@@ -1,7 +1,28 @@
 {
   "dependencies": {
-    "express": "^4.12.4",
-    "body-parser": "^1.12.2",
-    "mongoose": "^4.0.1"
-  }
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.6"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "simplecms",
+  "description": "Simple CMS with MEAN stack",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mailnickko/simpleCMS.git"
+  },
+  "author": "Nicholas Ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mailnickko/simpleCMS/issues"
+  },
+  "homepage": "https://github.com/Mailnickko/simpleCMS#readme"
 }
